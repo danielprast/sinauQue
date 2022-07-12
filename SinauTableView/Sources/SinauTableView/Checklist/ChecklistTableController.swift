@@ -19,7 +19,19 @@ final public class ChecklistTableController: UITableViewController {
   
   override public func viewDidLoad() {
     super.viewDidLoad()
-    
+    setup100Items()
+  }
+  
+  fileprivate func setup100Items() {
+    for v in 1...100  {
+      let item = ChecklistItem()
+      item.text = "Item \(v)"
+      item.checked = v % 2 == 1
+      items.append(item)
+    }
+  }
+  
+  fileprivate func setupDummyItems() {
     let item1 = ChecklistItem()
     item1.text = "Walk the dog"
     items.append(item1)
@@ -57,7 +69,6 @@ final public class ChecklistTableController: UITableViewController {
     let item9 = ChecklistItem()
     item9.text = "Android Development"
     items.append(item9)
-    
   }
   
   fileprivate func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
