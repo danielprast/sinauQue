@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2043116F287D0401005545E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043116E287D0401005545E4 /* AppDelegate.swift */; };
+		20431171287D0401005545E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20431170287D0401005545E4 /* SceneDelegate.swift */; };
+		20431173287D0401005545E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20431172287D0401005545E4 /* ViewController.swift */; };
+		20431176287D0401005545E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20431174287D0401005545E4 /* Main.storyboard */; };
+		20431178287D0402005545E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20431177287D0402005545E4 /* Assets.xcassets */; };
+		2043117B287D0402005545E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20431179287D0402005545E4 /* LaunchScreen.storyboard */; };
+		20431186287D0402005545E4 /* SinauQueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20431185287D0402005545E4 /* SinauQueTests.swift */; };
+		20431190287D0402005545E4 /* SinauQueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043118F287D0402005545E4 /* SinauQueUITests.swift */; };
+		20431192287D0402005545E4 /* SinauQueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20431191287D0402005545E4 /* SinauQueUITestsLaunchTests.swift */; };
+		204311A0287D057A005545E4 /* SinauQueApp in Frameworks */ = {isa = PBXBuildFile; productRef = 2043119F287D057A005545E4 /* SinauQueApp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20431182287D0402005545E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20431163287D0401005545E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2043116A287D0401005545E4;
+			remoteInfo = SinauQue;
+		};
+		2043118C287D0402005545E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20431163287D0401005545E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2043116A287D0401005545E4;
+			remoteInfo = SinauQue;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2043116B287D0401005545E4 /* SinauQue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SinauQue.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2043116E287D0401005545E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20431170287D0401005545E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		20431172287D0401005545E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		20431175287D0401005545E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20431177287D0402005545E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2043117A287D0402005545E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2043117C287D0402005545E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20431181287D0402005545E4 /* SinauQueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinauQueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20431185287D0402005545E4 /* SinauQueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinauQueTests.swift; sourceTree = "<group>"; };
+		2043118B287D0402005545E4 /* SinauQueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinauQueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2043118F287D0402005545E4 /* SinauQueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinauQueUITests.swift; sourceTree = "<group>"; };
+		20431191287D0402005545E4 /* SinauQueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinauQueUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20431168287D0401005545E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				204311A0287D057A005545E4 /* SinauQueApp in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2043117E287D0402005545E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20431188287D0402005545E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20431162287D0401005545E4 = {
+			isa = PBXGroup;
+			children = (
+				2043116D287D0401005545E4 /* SinauQue */,
+				20431184287D0402005545E4 /* SinauQueTests */,
+				2043118E287D0402005545E4 /* SinauQueUITests */,
+				2043116C287D0401005545E4 /* Products */,
+				2043119E287D057A005545E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2043116C287D0401005545E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2043116B287D0401005545E4 /* SinauQue.app */,
+				20431181287D0402005545E4 /* SinauQueTests.xctest */,
+				2043118B287D0402005545E4 /* SinauQueUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2043116D287D0401005545E4 /* SinauQue */ = {
+			isa = PBXGroup;
+			children = (
+				2043116E287D0401005545E4 /* AppDelegate.swift */,
+				20431170287D0401005545E4 /* SceneDelegate.swift */,
+				20431172287D0401005545E4 /* ViewController.swift */,
+				20431174287D0401005545E4 /* Main.storyboard */,
+				20431177287D0402005545E4 /* Assets.xcassets */,
+				20431179287D0402005545E4 /* LaunchScreen.storyboard */,
+				2043117C287D0402005545E4 /* Info.plist */,
+			);
+			path = SinauQue;
+			sourceTree = "<group>";
+		};
+		20431184287D0402005545E4 /* SinauQueTests */ = {
+			isa = PBXGroup;
+			children = (
+				20431185287D0402005545E4 /* SinauQueTests.swift */,
+			);
+			path = SinauQueTests;
+			sourceTree = "<group>";
+		};
+		2043118E287D0402005545E4 /* SinauQueUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2043118F287D0402005545E4 /* SinauQueUITests.swift */,
+				20431191287D0402005545E4 /* SinauQueUITestsLaunchTests.swift */,
+			);
+			path = SinauQueUITests;
+			sourceTree = "<group>";
+		};
+		2043119E287D057A005545E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2043116A287D0401005545E4 /* SinauQue */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20431195287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQue" */;
+			buildPhases = (
+				20431167287D0401005545E4 /* Sources */,
+				20431168287D0401005545E4 /* Frameworks */,
+				20431169287D0401005545E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SinauQue;
+			packageProductDependencies = (
+				2043119F287D057A005545E4 /* SinauQueApp */,
+			);
+			productName = SinauQue;
+			productReference = 2043116B287D0401005545E4 /* SinauQue.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20431180287D0402005545E4 /* SinauQueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20431198287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQueTests" */;
+			buildPhases = (
+				2043117D287D0402005545E4 /* Sources */,
+				2043117E287D0402005545E4 /* Frameworks */,
+				2043117F287D0402005545E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20431183287D0402005545E4 /* PBXTargetDependency */,
+			);
+			name = SinauQueTests;
+			productName = SinauQueTests;
+			productReference = 20431181287D0402005545E4 /* SinauQueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2043118A287D0402005545E4 /* SinauQueUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2043119B287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQueUITests" */;
+			buildPhases = (
+				20431187287D0402005545E4 /* Sources */,
+				20431188287D0402005545E4 /* Frameworks */,
+				20431189287D0402005545E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2043118D287D0402005545E4 /* PBXTargetDependency */,
+			);
+			name = SinauQueUITests;
+			productName = SinauQueUITests;
+			productReference = 2043118B287D0402005545E4 /* SinauQueUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20431163287D0401005545E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2043116A287D0401005545E4 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					20431180287D0402005545E4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2043116A287D0401005545E4;
+					};
+					2043118A287D0402005545E4 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2043116A287D0401005545E4;
+					};
+				};
+			};
+			buildConfigurationList = 20431166287D0401005545E4 /* Build configuration list for PBXProject "SinauQue" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20431162287D0401005545E4;
+			productRefGroup = 2043116C287D0401005545E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2043116A287D0401005545E4 /* SinauQue */,
+				20431180287D0402005545E4 /* SinauQueTests */,
+				2043118A287D0402005545E4 /* SinauQueUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20431169287D0401005545E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2043117B287D0402005545E4 /* LaunchScreen.storyboard in Resources */,
+				20431178287D0402005545E4 /* Assets.xcassets in Resources */,
+				20431176287D0401005545E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2043117F287D0402005545E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20431189287D0402005545E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20431167287D0401005545E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20431173287D0401005545E4 /* ViewController.swift in Sources */,
+				2043116F287D0401005545E4 /* AppDelegate.swift in Sources */,
+				20431171287D0401005545E4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2043117D287D0402005545E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20431186287D0402005545E4 /* SinauQueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20431187287D0402005545E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20431192287D0402005545E4 /* SinauQueUITestsLaunchTests.swift in Sources */,
+				20431190287D0402005545E4 /* SinauQueUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20431183287D0402005545E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2043116A287D0401005545E4 /* SinauQue */;
+			targetProxy = 20431182287D0402005545E4 /* PBXContainerItemProxy */;
+		};
+		2043118D287D0402005545E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2043116A287D0401005545E4 /* SinauQue */;
+			targetProxy = 2043118C287D0402005545E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20431174287D0401005545E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20431175287D0401005545E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20431179287D0402005545E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2043117A287D0402005545E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20431193287D0402005545E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20431194287D0402005545E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20431196287D0402005545E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SinauQue/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20431197287D0402005545E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SinauQue/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQue;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		20431199287D0402005545E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinauQue.app/SinauQue";
+			};
+			name = Debug;
+		};
+		2043119A287D0402005545E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SinauQue.app/SinauQue";
+			};
+			name = Release;
+		};
+		2043119C287D0402005545E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SinauQue;
+			};
+			name = Debug;
+		};
+		2043119D287D0402005545E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielprast.SinauQueUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SinauQue;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20431166287D0401005545E4 /* Build configuration list for PBXProject "SinauQue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20431193287D0402005545E4 /* Debug */,
+				20431194287D0402005545E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20431195287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20431196287D0402005545E4 /* Debug */,
+				20431197287D0402005545E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20431198287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20431199287D0402005545E4 /* Debug */,
+				2043119A287D0402005545E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2043119B287D0402005545E4 /* Build configuration list for PBXNativeTarget "SinauQueUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2043119C287D0402005545E4 /* Debug */,
+				2043119D287D0402005545E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2043119F287D057A005545E4 /* SinauQueApp */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SinauQueApp;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 20431163287D0401005545E4 /* Project object */;
+}
