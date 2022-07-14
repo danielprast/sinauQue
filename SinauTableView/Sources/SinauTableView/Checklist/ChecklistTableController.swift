@@ -9,17 +9,39 @@ import UIKit
 
 final public class ChecklistTableController: UITableViewController {
   
+  static let storyboardName = "CheckListScene"
+  
   public static func createFromStoryboard() -> ChecklistTableController {
-    let storyboard = UIStoryboard(name: "CheckListScene", bundle: Bundle.module)
+    let storyboard = UIStoryboard(name: Self.storyboardName, bundle: Bundle.module)
     let controller = storyboard.instantiateViewController(withIdentifier: "ChecklistTableController")
     return controller as! ChecklistTableController
+  }
+  
+  public static func createWithEmbeddedNavigationController() -> UINavigationController {
+    let storyboard = UIStoryboard(name: Self.storyboardName, bundle: Bundle.module)
+    let controller = storyboard.instantiateViewController(withIdentifier: "ChecklistNavController")
+    return controller as! UINavigationController
   }
   
   var items = [ChecklistItem]()
   
   override public func viewDidLoad() {
     super.viewDidLoad()
-    setup100Items()
+    navigationController?.navigationBar.prefersLargeTitles = true
+    setupDummyItems()
+  }
+  
+  @IBAction func addItem() {
+    let newRowIndex = items.count
+    
+    let item = ChecklistItem()
+    item.text = "I am a new row"
+    items.append(item)
+    
+    let indexPath = IndexPath(row: newRowIndex, section: 0)
+    let indexPaths = [indexPath]
+    tableView.insertRows(at: indexPaths, with: .automatic)
+    tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
   }
   
   fileprivate func setup100Items() {
@@ -61,14 +83,6 @@ final public class ChecklistTableController: UITableViewController {
     let item7 = ChecklistItem()
     item7.text = "The view"
     items.append(item7)
-    
-    let item8 = ChecklistItem()
-    item8.text = "Hack"
-    items.append(item8)
-    
-    let item9 = ChecklistItem()
-    item9.text = "Android Development"
-    items.append(item9)
   }
   
   fileprivate func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
@@ -117,6 +131,17 @@ final public class ChecklistTableController: UITableViewController {
       configureCheckmark(for: cell, with: item)
     }
     tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  public override func tableView(
+    _ tableView: UITableView,
+    commit editingStyle: UITableViewCell.EditingStyle,
+    forRowAt indexPath: IndexPath
+  ) {
+    items.remove(at: indexPath.row)
+    
+    let indexPaths = [indexPath]
+    tableView.deleteRows(at: indexPaths, with: .automatic)
   }
   
 }

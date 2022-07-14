@@ -7,7 +7,7 @@ public class SinauQueApp {
   }
   
   public var rootController: UIViewController {
-    return ChecklistTableController.createFromStoryboard()
+    return ChecklistTableController.createWithEmbeddedNavigationController()
   }
   
 }
