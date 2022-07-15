@@ -8,23 +8,28 @@
 import UIKit
 
 protocol AddItemViewControllerDelegate: AnyObject {
-  func addItemViewControllerDidCancel(_ controller: AddItemViewController)
-  func addItemViewController(
-    _ controller: AddItemViewController,
+  func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController)
+  func itemDetailViewController(
+    _ controller: ItemDetailViewController,
     didFinishAdding item: ChecklistItem
+  )
+  func itemDetailViewController(
+    _ controller: ItemDetailViewController,
+    didFinishEditing item: ChecklistItem
   )
 }
 
-class AddItemViewController: UITableViewController, UITextFieldDelegate {
+class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
   
   @IBOutlet weak var doneBarButton: UIBarButtonItem!
   @IBOutlet weak var textField: UITextField!
   
   weak var delegate: AddItemViewControllerDelegate?
+  var itemToEdit: ChecklistItem?
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    handleEditingItem()
     navigationItem.largeTitleDisplayMode = .never
   }
   
@@ -60,15 +65,30 @@ class AddItemViewController: UITableViewController, UITextFieldDelegate {
     return true
   }
   
+  fileprivate func handleEditingItem() {
+    if let item = itemToEdit {
+      title = "Edit Item"
+      textField.text = item.text
+      doneBarButton.isEnabled = true
+    }
+  }
+  
   @IBAction func cancel() {
-    delegate?.addItemViewControllerDidCancel(self)
+    delegate?.itemDetailViewControllerDidCancel(self)
   }
   
   @IBAction func done() {
     print("Contents text field: \(textField.text!)")
+    
+    if let itemToEdit = itemToEdit {
+      itemToEdit.text = textField.text!
+      delegate?.itemDetailViewController(self, didFinishEditing: itemToEdit)
+      return
+    }
+    
     let item = ChecklistItem()
     item.text = textField.text!
-    delegate?.addItemViewController(self, didFinishAdding: item)
+    delegate?.itemDetailViewController(self, didFinishAdding: item)
   }
   
 }

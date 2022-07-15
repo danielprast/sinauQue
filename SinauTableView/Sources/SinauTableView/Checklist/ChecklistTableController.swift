@@ -24,11 +24,22 @@ final public class ChecklistTableController: UITableViewController {
   }
   
   var items = [ChecklistItem]()
+  var didFinishAddingItem = false
   
   override public func viewDidLoad() {
     super.viewDidLoad()
     navigationController?.navigationBar.prefersLargeTitles = true
     setupDummyItems()
+  }
+  
+  public override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    if didFinishAddingItem {
+      let lastRowIndex = items.count - 1
+      let indexPath = IndexPath(row: lastRowIndex, section: 0)
+      tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+      didFinishAddingItem = false
+    }
   }
   
   fileprivate func setup100Items() {
@@ -72,12 +83,11 @@ final public class ChecklistTableController: UITableViewController {
     items.append(item7)
   }
   
-  fileprivate func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
-    if item.checked {
-      cell.accessoryType = .checkmark
-    } else {
-      cell.accessoryType = .none
-    }
+  fileprivate func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
+    let checklistLabel = cell.viewWithTag(1000) as! UILabel
+    let label = cell.viewWithTag(1001) as! UILabel
+    checklistLabel.text = item.text
+    label.text = item.checked ? "√" : ""
   }
   
   // MARK: - TableView dataSource
@@ -102,7 +112,7 @@ final public class ChecklistTableController: UITableViewController {
     
     let label = cell.viewWithTag(1000) as! UILabel
     label.text = item.text
-    configureCheckmark(for: cell, with: item)
+    configureText(for: cell, with: item)
     return cell
   }
   
@@ -115,7 +125,7 @@ final public class ChecklistTableController: UITableViewController {
     if let cell = tableView.cellForRow(at: indexPath) {
       let item = items[indexPath.row]
       item.checked.toggle()
-      configureCheckmark(for: cell, with: item)
+      configureText(for: cell, with: item)
     }
     tableView.deselectRow(at: indexPath, animated: true)
   }
@@ -136,8 +146,15 @@ final public class ChecklistTableController: UITableViewController {
     sender: Any?
   ) {
     if segue.identifier == "AddItem" {
-      let controller = segue.destination as! AddItemViewController
+      let controller = segue.destination as! ItemDetailViewController
       controller.delegate = self
+    } else if segue.identifier == "EditItem" {
+      let controller = segue.destination as! ItemDetailViewController
+      controller.delegate = self
+      
+      if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+        controller.itemToEdit = items[indexPath.row]
+      }
     }
   }
   
@@ -145,12 +162,12 @@ final public class ChecklistTableController: UITableViewController {
 
 extension ChecklistTableController: AddItemViewControllerDelegate {
   
-  func addItemViewControllerDidCancel(_ controller: AddItemViewController) {
+  func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController) {
     navigationController?.popViewController(animated: true)
   }
   
-  func addItemViewController(
-    _ controller: AddItemViewController,
+  func itemDetailViewController(
+    _ controller: ItemDetailViewController,
     didFinishAdding item: ChecklistItem
   ) {
     let newRowIndex = items.count
@@ -159,7 +176,21 @@ extension ChecklistTableController: AddItemViewControllerDelegate {
     let indexPath = IndexPath(row: newRowIndex, section: 0)
     let indexPaths = [indexPath]
     tableView.insertRows(at: indexPaths, with: .automatic)
+    didFinishAddingItem = true
     
+    navigationController?.popViewController(animated: true)
+  }
+  
+  func itemDetailViewController(
+    _ controller: ItemDetailViewController,
+    didFinishEditing item: ChecklistItem
+  ) {
+    if let index = items.firstIndex(of: item) {
+      let indexPath = IndexPath(row: index, section: 0)
+      if let cell = tableView.cellForRow(at: indexPath) {
+        configureText(for: cell, with: item)
+      }
+    }
     navigationController?.popViewController(animated: true)
   }
   
